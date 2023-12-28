@@ -1,3 +1,206 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    @apply bg-blue-bg;
+  }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply  bg-blue-bg;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+ @apply   bg-blue-bg;
+  border-radius: 5px;
+}
+
+
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #AED6EF;
+}
+
+
+@layer components {
+
+.bg-bluegradient{
+  @apply bg-gradient-to-r from-[#2387FE] via-blue-dark to-[#75c9fa]
+}
+.book-button{
+  @apply py-2 px-3 rounded-md bg-200% bg-bluegradient text-white hover:bg-right-center transition-[background] duration-[400ms] ease-in-out 
+}
+
+.nav-links{
+  @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-dark after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center
+}
+.bg-color{
+  @apply bg-gradient-to-r from-[#FFFFFF] via-[#F0FAFC] to-[#e7f6fd]
+}
+
+.process-cards{
+  @apply w-[70px] h-[70px] flex items-center justify-center bg-[#f2f3f5] border-white border-2 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md
+}
+
+.distance-bar{
+  @apply absolute bottom-[2px] rounded-br-lg right-[2px] h-[40px] w-[350px] flex items-center bg-bluegradient  justify-center z-[1000] font-semibold text-white max-sm:w-[200px] max-sm:text-sm max-sm:p-2
+}
+
+.formdivs div{
+  @apply flex flex-col
+}
+
+.formdivs label{ @apply text-sm}
+
+.formdivs input, .textarea{
+  @apply rounded-lg border border-[#ced4da] w-full px-[6px] py-[12px] outline-none focus:border-[#2386fead] focus:border-[3px] 
+}
+.card-details:hover{
+  @apply border-2 border-blue-dark
+}
+.card-details:hover .card-show-details{
+  @apply opacity-100 absolute top-0 w-[220px]
+}
+
+.customercarediv{
+  @apply w-[50px] h-[50px] flex items-center justify-center text-lg text-white rounded-[50%]
+}
+}
+
+
+/* dashboard section class */
+.dashboardsection {
+  position: absolute;
+  top: 100px;
+  left: 268px;
+  max-width: calc(100% - 268px);
+  overflow-x: hidden;
+}
+
+@media (max-width: 870px) {
+  .dashboardsection {
+    position: absolute;
+    top: 100px;
+    left: auto;
+    max-width: none;
+    overflow-x: auto;
+  }
+}
+
+
+.nav-hover:hover, .mobilenav-hover:hover, .active{
+  color: black;
+}
+
+
+
+
+.nav-hover:hover .item-icon, .active .item-icon{
+background-color: white;
+border: 1px solid white;
+}
+
+.mobilenav-hover:hover .item-icon{
+  background-color: #AED6EF;
+  border: 1px solid #AED6EF;
+  }
+
+.placeholder-sm::placeholder {
+  font-size: 13px; 
+}
+
+.signin-page {
+  background-color: #E3F0F9;
+}
+
+
+.icon-container {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.helpline {
+  transition: all 0.3s; /* Add this transition */
+}
+
+.helpline:hover .iconhover{
+  display: block;
+}
+
+
+/* DotLoader.module.css */
+@keyframes loadingText {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+}
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color, black);
+}
+
+.loader-text {
+  width: 163.59px;
+  text-align: left;
+}
+
+.ellipsis::after {
+  content: "";
+  animation: loadingText 3s linear infinite;
+}
+
+.ellipsis {
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: light ) {
+  :root {
+
+  }
+}
+
+body {
+
+}
